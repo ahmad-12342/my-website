@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansari's Scent | Luxury Perfumes</title>
+    <link rel="shortcut icon" href="./black.logo.png.png" type="image/x-icon">
+</head>
+<style>
+        body{
+            background-color: black;
+            color: gold;
+        }
+section {
+      padding: 100px 60px;
+    }
+    .shop-section {
+      background: #1a1a1a;
+      text-align: center;
+    }
+    .shop-section h2 {
+      font-size: 36px;
+      color: gold;
+      margin-bottom: 40px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .product {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.4s;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255,215,0,0.3);
+    }
+    .product img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .product h3 {
+      color: gold;
+      margin: 15px 0 5px;
+    }
+    .product p {
+      color: #ccc;
+      font-size: 15px;
+      padding: 0 15px;
+    }
+    .product button {
+      margin: 20px 0 25px;
+      padding: 10px 25px;
+      background: gold;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .product button:hover {
+      background: #e0c200;
+    }        
+    </style>
+<body>
+    <section class="shop-section" id="shop">
+    <h2>Our Signature Perfumes</h2>
+    <div class="products">
+      <div class="product"  >
+        <img src="./green.png" alt="Royal Oud">
+        <h3>Royal Oud</h3>
+        <p>Experience rich woody notes blended with a touch of luxury.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./orange.png" alt="Amber Noir">
+        <h3>Amber Noir</h3>
+        <p>Warm amber and smoky undertones for an unforgettable aura.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./white.png" alt="Velvet Musk">
+        <h3>Velvet Musk</h3>
+        <p>Soft, sensual, and modern — designed for timeless sophistication.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+        
+      </div>
+      <div class="product">
+  <img src="./black..png" alt="Mystic Bloom">
+  <h3>Mystic Bloom</h3>
+  <p>A fresh floral fragrance with notes of jasmine and rose.</p>
+  <button onclick="addToCart()">Add to Cart </button>
+</div>
+<div id="cart-items"></div>
+
+
+</body>
+
+</html>

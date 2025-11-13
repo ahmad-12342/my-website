@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansari's Scent | Luxury Perfumes</title>
+  <link rel="shortcut icon" href="./black.logo.png.png" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0e0e0e;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.8);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid gold;
+    }
+    header h1 {
+      color: gold;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: gold;
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600180758890-6c3b66e2c2b3?auto=format&fit=crop&w=1600&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 50px;
+      color: gold;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(255,215,0,0.4);
+    }
+    .hero p {
+      font-size: 20px;
+      color: #ddd;
+      max-width: 600px;
+    }
+    .hero button {
+      margin-top: 30px;
+      padding: 12px 40px;
+      background: gold;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: #e0c200;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 100px 60px;
+    }
+    .shop-section {
+      background: #1a1a1a;
+      text-align: center;
+    }
+    .shop-section h2 {
+      font-size: 36px;
+      color: gold;
+      margin-bottom: 40px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .product {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.4s;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255,215,0,0.3);
+    }
+    .product img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .product h3 {
+      color: gold;
+      margin: 15px 0 5px;
+    }
+    .product p {
+      color: #ccc;
+      font-size: 15px;
+      padding: 0 15px;
+    }
+    .product button {
+      margin: 20px 0 25px;
+      padding: 10px 25px;
+      background: gold;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .product button:hover {
+      background: #e0c200;
+    }
+    .about {
+      background: #111;
+      color: #ddd;
+      text-align: center;
+    }
+    .about h2 {
+      color: gold;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .contact {
+      background: #1a1a1a;
+      text-align: center;
+    }
+    .contact h2 {
+      color: gold;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: #fff;
+      font-size: 16px;
+    }
+    input:focus, textarea:focus {
+      outline: 1px solid gold;
+    }
+    button.submit {
+      padding: 12px;
+      background: gold;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button.submit:hover {
+      background: #e0c200;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid gold;
+      color: #ccc;
+      margin-top: 80px;
+    }
+    footer h3 {
+      color: gold;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ansari's Scent</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="shop.html" target="_blank"> Shop</a>
+      <a href="about.html" target="_blank">About</a>
+      <a href="contact.html" target="_blank">Contact</a>
+      <a href="cart.html" target="_blank">Cart</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Luxury in Every Drop</h2>
+    <p>Discover the timeless elegance of Ansari's Scent — crafted with passion, perfection, and prestige.</p>
+    <button onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+  </section>
+
+  <section class="shop-section" id="shop">
+    <h2>Our Signature Perfumes</h2>
+    <div class="products">
+      <div class="product"  >
+        <img src="./green.png" alt="Royal Oud">
+        <h3>Royal Oud</h3>
+        <p>Experience rich woody notes blended with a touch of luxury.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./orange.png" alt="Amber Noir">
+        <h3>Amber Noir</h3>
+        <p>Warm amber and smoky undertones for an unforgettable aura.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./white.png" alt="Velvet Musk">
+        <h3>Velvet Musk</h3>
+        <p>Soft, sensual, and modern — designed for timeless sophistication.</p>
+        <button>Add to Cart</button>
+        
+      </div>
+      <div class="product">
+  <img src="./black..png" alt="Mystic Bloom">
+  <h3>Mystic Bloom</h3>
+  <p>A fresh floral fragrance with notes of jasmine and rose.</p>
+  <button>Add to Cart </button>
+</div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Ansari's Scent is a house of luxury fragrances that blend tradition and innovation. Each bottle is crafted with precision and passion to capture emotions, memories, and timeless sophistication. We believe in making every scent an experience — one that defines elegance and individuality.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit">Send Message</button required="">
+    </form>
+  </section>
+
+  <footer>
+    <h3>Ansari's Scent</h3>
+    <p>Luxury Perfume House | Crafted with Passion</p>
+    <p>© 2025 Ansari's Scent. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
